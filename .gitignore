@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (large datasets)
+data/raw/*.csv
+data/raw/*.json
+data/raw/*.xml
+data/processed/*.csv
+data/processed/*.json
+data/knowledge_base/*.pkl
+data/knowledge_base/*.h5
+
+# Model files (large binary files)
+models/trained/*.pkl
+models/trained/*.h5
+models/trained/*.pt
+models/trained/*.pth
+models/trained/*.ckpt
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.env.local
+credentials.json
+secrets.json
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Docker
+docker-compose.override.yml
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.bak
+outputs/*.tmp
+
+# Keep directory structure with .gitkeep files
+!.gitkeep
