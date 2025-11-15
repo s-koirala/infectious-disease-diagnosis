@@ -212,4 +212,6 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
 - PubMed/PMC offers multiple APIs (E-utilities, OAI-PMH, BioC) with millions of OA articles
 - Created comprehensive legal assessment document: `docs/research/data_source_legal_assessment.md`
 - **Revised Phase 2 Strategy:** Focus on PubMed/PMC, CDC, WHO as primary sources; pursue StatPearls/Medscape licensing in parallel
-- Proceeding with legally compliant open-source data collection
+- Created StatPearls integration guide with three access pathways
+- **User Decision:** StatPearls deferred pending license clarification - will circle back after gathering more information
+- **Active Phase 2:** Proceeding with legally unrestricted open data (PubMed/PMC, CDC, WHO)

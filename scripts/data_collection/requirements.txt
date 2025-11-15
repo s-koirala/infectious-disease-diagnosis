@@ -1,0 +1,17 @@
+# Data Collection Dependencies
+# PubMed/PMC Access
+requests>=2.31.0
+biopython>=1.81
+lxml>=4.9.3
+
+# Data Processing
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Configuration and Utilities
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+
+# Optional: For advanced processing
+beautifulsoup4>=4.12.0
+xmltodict>=0.13.0
