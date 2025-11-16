@@ -57,11 +57,76 @@ Collect larger dataset (e.g., 1000 articles):
 python collect_pubmed_pmc.py --max-results 1000
 ```
 
+## Collection Strategy Evolution
+
+**See [DATA_COLLECTION_STRATEGY.md](../../DATA_COLLECTION_STRATEGY.md) for complete strategy documentation.**
+
+### Iteration 1: Disease-Specific Collection (COMPLETED)
+- Focus: Individual diseases (sepsis, TB, pneumonia, etc.)
+- Results: 3,090 articles collected, 2,444 full-text
+- Scripts: `collect_clinical_guidelines.py`
+
+### Iteration 2: Symptom-Based Collection (CURRENT)
+- Focus: Clinical presentations and symptoms (fever, rash, headache, etc.)
+- Rationale: Aligns with clinical workflow (symptoms → diagnosis)
+- Scripts: `collect_symptom_based_guidelines.py` **← Recommended**
+
+---
+
 ## Scripts Overview
+
+### `collect_symptom_based_guidelines.py` ⭐ **RECOMMENDED - Second Iteration**
+
+**Symptom-based clinical guidelines collection** - Aligns with actual clinical workflow.
+
+**Purpose:** Collect articles focused on differential diagnosis from symptom presentations.
+
+**Keywords:**
+- Symptoms: fever, rash, headache, nausea, vomiting, diarrhea
+- Conditions: sepsis, pneumonia, meningitis, encephalitis, HIV/AIDS, TB, UTI, etc.
+
+**Filters:**
+- English language only
+- Human studies only
+- Reviews, Guidelines, Meta-analyses, Systematic Reviews
+- Last 20 years (2005-2025)
+
+**Usage:**
+```bash
+# Run complete symptom-based collection (~2,200 articles)
+python collect_symptom_based_guidelines.py
+```
+
+**Output:** `data/raw/symptom_based_guidelines/`
+
+---
+
+### `collect_clinical_guidelines.py`
+
+Disease-specific clinical guidelines collection (Iteration 1 - already completed).
+
+**Usage:**
+```bash
+# List all 52 diseases
+python collect_clinical_guidelines.py --list-diseases
+
+# Collect all diseases (52 × 50 articles)
+python collect_clinical_guidelines.py --disease all --max 50
+
+# Collect specific category
+python collect_clinical_guidelines.py --disease bacterial --max 100
+
+# Collect specific disease
+python collect_clinical_guidelines.py --disease sepsis --max 200
+```
+
+**Output:** `data/raw/clinical_guidelines/`
+
+---
 
 ### `collect_pubmed_pmc.py`
 
-Main data collection script for PubMed/PMC Open Access Subset.
+General PubMed/PMC collection script (baseline/initial implementation).
 
 **Features:**
 - Searches for infectious disease articles
@@ -203,16 +268,68 @@ The script searches for articles matching infectious disease terms:
 - Downloads full text XML only when PMC ID available
 - Reports counts in collection summary
 
+## Additional Scripts
+
+### `extract_statpearls.py`
+
+StatPearls FTP extraction (awaiting commercial license).
+
+**Usage:**
+```bash
+# Download StatPearls archive (~1.6GB)
+python extract_statpearls.py --download
+
+# Extract infectious disease articles
+python extract_statpearls.py --extract
+```
+
+**Status:** Deferred pending license acquisition
+
+---
+
+### `create_article_catalog.py`
+
+Generate comprehensive catalog of all collected articles.
+
+**Usage:**
+```bash
+python create_article_catalog.py
+```
+
+**Output:** `reports/clinical_guidelines_catalog.csv`
+
+Creates detailed spreadsheet with:
+- Title, DOI, journal, publication date
+- Disease, category, publication type
+- PMIDs, PMC IDs, authors
+- Full-text availability
+
+---
+
+## Output Structure Alignment
+
+The **symptom-based collection** directly supports the 5-part clinical output:
+
+1. **Most probable differential diagnosis** - Articles with ranked differentials
+2. **Less common but important DD** - "Can't miss" diagnoses from reviews
+3. **Less common/rare DD** - Comprehensive differential lists
+4. **Lab tests for highest probability DD** - Diagnostic workup recommendations
+5. **Clarifying questions** - Clinical features that narrow differential
+
+---
+
 ## Next Steps
 
-After collecting data:
+After collecting symptom-based data (Iteration 2):
 
-1. **Process Articles:** Extract clinical information from XML
-2. **Structure Knowledge Base:** Convert to standardized format
-3. **Quality Check:** Validate relevance and accuracy
-4. **Build Vector Database:** Create embeddings for RAG
+1. **Validate Content:** Sample articles to verify differential diagnosis focus
+2. **Process Articles:** Extract structured diagnostic information from XML
+3. **Integrate Collections:** Combine Iteration 1 + 2, remove duplicates
+4. **Structure Knowledge Base:** Dual indexing (by symptom + by disease)
+5. **Extract Training Data:** Symptom → Disease mappings for ML model
+6. **Build Vector Database:** Create embeddings for RAG system
 
-See [data_collection_implementation_guide.md](../../docs/technical/data_collection_implementation_guide.md) for processing pipeline details.
+See [DATA_COLLECTION_STRATEGY.md](../../DATA_COLLECTION_STRATEGY.md) for complete strategy.
 
 ## Data Collection Checklist
 
@@ -245,5 +362,9 @@ See [data_collection_implementation_guide.md](../../docs/technical/data_collecti
 ---
 
 **Last Updated:** 2025-11-15
-**Status:** Ready for pilot data collection
-**Next:** Register for NCBI API key and run pilot collection
+**Current Status:** Iteration 2 - Symptom-Based Collection Ready
+**Next Steps:**
+1. Run symptom-based collection: `python collect_symptom_based_guidelines.py`
+2. Validate content quality
+3. Integrate with Iteration 1 collection
+4. Begin data processing and knowledge extraction

@@ -232,7 +232,9 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
 - **User Decision:** StatPearls deferred pending license clarification - will circle back after gathering more information
 - **Active Phase 2:** Proceeding with legally unrestricted open data (PubMed/PMC, CDC, WHO)
 
-**Session 3 (2025-11-15): Data Collection Implementation**
+**Session 3 (2025-11-15): Data Collection Implementation & Refinement**
+
+**Part 1: Initial Collection (Disease-Specific Approach)**
 - **NCBI API Credentials:** Configured with API key (10 req/sec rate limit)
 - **Initial Collection Issues Fixed:**
   - Fixed query filter: "open access"[filter] → ffrft[filter]
@@ -248,7 +250,36 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
   1. `extract_statpearls.py` - Efficient StatPearls FTP extraction and infectious disease filtering
   2. `collect_clinical_guidelines.py` - Disease-specific clinical guidelines collection (52 diseases)
 - **Sepsis Validation:** Tested clinical guidelines collection on sepsis (50 articles, 82% reviews, 62.5% diagnostic content)
-- **Feature Clarification:** Updated project documentation to explicitly include:
-  - Advise differential diagnosis
-  - Advise diagnostic tests
-  - Provide literature and references to clinical practitioners
+
+**Part 2: First Iteration Complete - Disease-Specific Collection**
+- **OpenEvidence Analysis:** Comprehensive competitive analysis completed
+  - Market validation: VC-backed (Sequoia, GV) proves demand
+  - Our positioning: "OpenEvidence for Infectious Diseases + AI Diagnostic Prediction"
+  - Differentiation: Specialized ID focus + predictive ML + 3-tier differential diagnosis
+- **Full Collection Complete:**
+  - Option A: All 52 diseases, max 50 articles = 1,631 metadata, 1,312 full-text
+  - Option B: Priority diseases (bacterial + viral), max 100 = 1,459 metadata, 1,132 full-text
+  - **Grand Total: 3,090 metadata, 2,444 full-text (79.1% coverage)**
+- **Comprehensive Catalog Created:** `clinical_guidelines_catalog.csv` with 2,152 unique articles
+  - 81.5% Reviews, 8.2% Meta-analyses, 2.6% Practice Guidelines
+  - Top journals: BMC Infectious Diseases, Medicine, Frontiers in Immunology
+
+**Part 3: Second Iteration - Symptom-Based Collection (REFINED STRATEGY)**
+- **Critical Pivot:** Shifted from disease-specific to symptom-based queries
+- **Rationale:** Clinicians present with symptoms, not diagnoses - aligns with actual workflow
+- **Output Structure Defined:**
+  1. Most probable differential diagnosis (DD)
+  2. Less common but important (secondary) DD
+  3. Less common/rare DD
+  4. Lab tests for highest probability DD
+  5. Clarifying questions to refine DD
+- **New Keyword Strategy:**
+  - Symptoms: fever, rash, headache, nausea, vomiting, diarrhea
+  - Conditions: sepsis, pneumonia, meningitis, encephalitis, HIV/AIDS, TB, etc.
+  - Diagnostic focus: differential diagnosis, diagnostic approach, clinical features
+- **Enhanced Filters:**
+  - English language only
+  - Humans (no animal studies)
+  - Reviews/Guidelines/Meta-analyses/Systematic Reviews
+  - Last 20 years (2005-2025)
+- **Script Created:** `collect_symptom_based_guidelines.py` ready for execution

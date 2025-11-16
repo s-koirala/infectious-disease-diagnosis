@@ -12,10 +12,19 @@ A comprehensive clinical decision support system for infectious disease clinics,
 1. **Predictive Model:** ML-based diagnostic prediction for infectious diseases
 2. **LLM Chatbot:** Conversational AI assistant for clinical guidance
 
-This tool assists clinicians by:
-- **Advising differential diagnoses** - generating ranked lists of possible infectious diseases
-- **Advising diagnostic tests** - recommending appropriate laboratory and imaging studies
-- **Providing literature and references** - supporting recommendations with peer-reviewed evidence
+This tool assists clinicians by providing structured diagnostic support starting from clinical presentations:
+
+**Primary Output Structure:**
+1. **Most probable differential diagnosis (DD)** - Highest likelihood infectious diseases based on presentation
+2. **Less common but important DD** - Potentially serious secondary diagnoses that shouldn't be missed
+3. **Less common/rare DD** - Rare possibilities to complete the differential
+4. **Recommended laboratory tests** - Specific tests for the highest probability diagnoses
+5. **Clarifying questions** - Additional information needed to refine diagnostic certainty
+
+**Supporting Features:**
+- Evidence-based literature references for all recommendations
+- Ranked differential diagnosis with clinical rationale
+- Diagnostic test recommendations with interpretation guidance
 
 The system guides clinicians in determining appropriate labs, tests, treatments, and therapeutic approaches while avoiding liability issues by not providing exact treatment prescriptions.
 
@@ -40,11 +49,12 @@ Active planning and formative research phase. Conducting methodology research, a
 - Avoid liability by NOT prescribing specific medications or exact treatment protocols
 
 **Clinical Use Cases:**
-- Aid in differential diagnosis of infectious diseases with evidence-based ranking
-- Recommend appropriate diagnostic tests and laboratories with clinical rationale
-- Suggest treatment categories and therapeutic considerations
-- Provide evidence-based clinical guidance with literature references
-- Support clinical decision-making with peer-reviewed sources
+- **Symptom-driven diagnosis:** Clinician enters presenting symptoms (fever, rash, headache, etc.)
+- **Three-tier differential:** System provides most probable, important secondary, and rare diagnoses
+- **Test recommendations:** Specific lab tests and imaging for top diagnoses
+- **Interactive refinement:** System asks clarifying questions to narrow differential
+- **Evidence-based support:** All recommendations linked to peer-reviewed literature
+- **Treatment guidance:** Suggest treatment categories and therapeutic considerations
 
 ---
 
