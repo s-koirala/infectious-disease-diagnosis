@@ -312,3 +312,50 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
   - Upper respiratory: 18 articles → 137 full-text (7.6x improvement)
 - **Script:** `collect_mesh_optimized_guidelines.py`
 - **Note:** Diagnostic testing queries deferred to future iteration
+
+**Session 4 (2025-11-16): Deduplication, Validation, and Iteration 4**
+
+**Part 1: Deduplication and Catalog**
+- **Deduplication Complete:**
+  - Total articles collected: 6,223 (across all iterations)
+  - Unique articles: 5,308
+  - With full-text: 3,798 (71.6% coverage)
+  - Duplicates removed: 915 instances
+  - Articles appearing in multiple iterations: 757
+- **Deduplicated Catalog Created:**
+  - Complete catalog: `deduplicated_catalog.csv` (5,308 articles)
+  - Publication breakdown: 63.9% Reviews, 8.6% Meta-analyses, 2.5% Guidelines
+  - Top journals: BMC Infectious Diseases, Cureus, Frontiers in Immunology
+- **Script:** `deduplicate_collections.py`, `create_deduplicated_catalog.py`
+
+**Part 2: Automated Content Validation**
+- **Validation Strategy:** Automated keyword-based content analysis
+- **Sample:** 100 articles validated
+- **Results:**
+  - Average quality score: 14.0/100 (low due to 68% metadata-only)
+  - Content presence: 16% differential diagnosis, 10% diagnostic testing, 14% clinical features
+  - Note: Low scores primarily due to validation on abstracts rather than full-text
+  - Recommendation: Focus validation on full-text subset for accurate assessment
+- **Script:** `validate_content_quality.py`
+
+**Part 3: Iteration 4 - Diagnostic Testing (IN PROGRESS)**
+- **Strategy:** MeSH-optimized queries for laboratory and diagnostic testing
+- **Purpose:** Support Output #4 "Lab tests for DD with highest probability"
+- **ARUP Lab Analysis:** Extracted diagnostic testing keywords from leading reference lab
+- **Categories (12 diagnostic testing areas):**
+  - Molecular Diagnostics (PCR, NGS, NAAT)
+  - Serologic Testing (ELISA, IFA, rapid tests)
+  - Blood Culture (bacteremia diagnosis)
+  - Antimicrobial Susceptibility Testing (resistance)
+  - Viral Load Monitoring (HIV, HCV, CMV)
+  - Tuberculosis Diagnostics (GeneXpert, IGRA)
+  - Fungal Diagnostics (galactomannan, beta-D-glucan)
+  - Point-of-Care Testing (rapid diagnostics)
+  - CSF Analysis (CNS infections)
+  - GI Pathogen Testing (multiplex panels)
+  - STI Testing (NAAT algorithms)
+  - Biomarkers for Infection (procalcitonin, CRP)
+- **Expected:** 1,200-2,400 articles (12 categories × 100-200 each)
+- **Status:** Collection running
+- **Scripts:** `collect_diagnostic_testing_guidelines.py`
+- **Strategy Document:** `docs/research/iteration_4_diagnostic_testing_strategy.md`

@@ -1,0 +1,1800 @@
+{
+  "sample_size": 100,
+  "total_articles": 5308,
+  "articles_with_fulltext": 32,
+  "average_quality_score": 14.0,
+  "score_distribution": {
+    "Excellent (80-100)": 4,
+    "Good (60-79)": 6,
+    "Fair (40-59)": 8,
+    "Poor (20-39)": 5,
+    "Very Poor (0-19)": 77
+  },
+  "category_presence": {
+    "differential_diagnosis": {
+      "count": 16,
+      "percentage": 16.0
+    },
+    "diagnostic_testing": {
+      "count": 10,
+      "percentage": 10.0
+    },
+    "clinical_features": {
+      "count": 14,
+      "percentage": 14.0
+    },
+    "diagnostic_criteria": {
+      "count": 8,
+      "percentage": 8.0
+    },
+    "treatment_guidance": {
+      "count": 27,
+      "percentage": 27.0
+    }
+  },
+  "validations": [
+    {
+      "pmid": "15768622",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "15768623",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "15802165",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "treatment",
+            "therapy",
+            "antimicrobial"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "15831830",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "15845229",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "15845231",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "15864658",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "15897953",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "15943861",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 13,
+          "keywords_found": [
+            "diagnostic test",
+            "test result",
+            "sensitivity",
+            "specificity"
+          ]
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        }
+      },
+      "overall_score": 25
+    },
+    {
+      "pmid": "15999870",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16045459",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16049294",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16100859",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16157992",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16213784",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "sensitivity"
+          ]
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 8,
+          "keywords_found": [
+            "treatment",
+            "antiviral"
+          ]
+        }
+      },
+      "overall_score": 35
+    },
+    {
+      "pmid": "16256056",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16300038",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16326843",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16370404",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16373252",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16373256",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16416392",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16417071",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16418523",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16431882",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16437457",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16494745",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 8,
+          "keywords_found": [
+            "treatment",
+            "antimicrobial"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "16517798",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16554245",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "laboratory diagnosis",
+            "sensitivity"
+          ]
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 13,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy",
+            "antiviral"
+          ]
+        }
+      },
+      "overall_score": 65
+    },
+    {
+      "pmid": "16575502",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 2,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "signs and symptoms"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        }
+      },
+      "overall_score": 50
+    },
+    {
+      "pmid": "16623208",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16696526",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "16704774",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        }
+      },
+      "overall_score": 0
+    },
+    {
+      "pmid": "16722573",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 2,
+          "keywords_found": [
+            "management"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "16722618",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "treatment"
+          ]
+        }
+      },
+      "overall_score": 40
+    },
+    {
+      "pmid": "16932438",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 2,
+          "keywords_found": [
+            "clinical presentation"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 35,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy",
+            "antiviral"
+          ]
+        }
+      },
+      "overall_score": 30
+    },
+    {
+      "pmid": "16932563",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 6,
+          "keywords_found": [
+            "sensitivity"
+          ]
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "signs and symptoms"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 12,
+          "keywords_found": [
+            "treatment",
+            "therapy",
+            "antiviral"
+          ]
+        }
+      },
+      "overall_score": 55
+    },
+    {
+      "pmid": "17002605",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17040245",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17068275",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17099092",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17184545",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 6,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 6,
+          "keywords_found": [
+            "treatment"
+          ]
+        }
+      },
+      "overall_score": 40
+    },
+    {
+      "pmid": "17195140",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17204147",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "clinical presentation",
+            "clinical finding"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "diagnostic criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 17,
+          "keywords_found": [
+            "treatment",
+            "management"
+          ]
+        }
+      },
+      "overall_score": 75
+    },
+    {
+      "pmid": "17396274",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17430337",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17636667",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17655751",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 14,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 9,
+          "keywords_found": [
+            "diagnostic criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 44,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy",
+            "antimicrobial"
+          ]
+        }
+      },
+      "overall_score": 55
+    },
+    {
+      "pmid": "17683184",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17767107",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17826188",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 5,
+          "keywords_found": [
+            "sensitivity",
+            "specificity"
+          ]
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "physical examination"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 37,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy",
+            "antibiotic",
+            "antiviral"
+          ]
+        }
+      },
+      "overall_score": 55
+    },
+    {
+      "pmid": "17885699",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "17993743",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "treatment"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "18026633",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18087650",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18194573",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 26,
+          "keywords_found": [
+            "treatment",
+            "antibiotic"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "18202436",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18350762",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18366757",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 9,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential",
+            "alternative diagnoses"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "diagnostic evaluation"
+          ]
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 6,
+          "keywords_found": [
+            "diagnostic criteria",
+            "clinical criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 33,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy"
+          ]
+        }
+      },
+      "overall_score": 80
+    },
+    {
+      "pmid": "18373701",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18382617",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "signs and symptoms"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        }
+      },
+      "overall_score": 20
+    },
+    {
+      "pmid": "18414361",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18609677",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18650914",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18651939",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 2,
+          "keywords_found": [
+            "diagnostic criteria",
+            "clinical criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 28,
+          "keywords_found": [
+            "treatment",
+            "management"
+          ]
+        }
+      },
+      "overall_score": 55
+    },
+    {
+      "pmid": "18667063",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        }
+      },
+      "overall_score": 30
+    },
+    {
+      "pmid": "18689964",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18711265",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 14,
+          "keywords_found": [
+            "treatment",
+            "therapy"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "18711266",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "management",
+            "therapy"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "18803612",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "signs and symptoms"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 2,
+          "keywords_found": [
+            "diagnostic criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "management"
+          ]
+        }
+      },
+      "overall_score": 75
+    },
+    {
+      "pmid": "18814706",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18819238",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18831914",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "18971152",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19022817",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19056073",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19136437",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19139804",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "clinical feature"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "diagnostic criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "treatment",
+            "therapy"
+          ]
+        }
+      },
+      "overall_score": 75
+    },
+    {
+      "pmid": "19182730",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19220335",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19222355",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19251779",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19252116",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19266596",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19357635",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19439840",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19445740",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19488414",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19572851",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19584497",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19591690",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "signs and symptoms",
+            "physical examination"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 11,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy"
+          ]
+        }
+      },
+      "overall_score": 60
+    },
+    {
+      "pmid": "19608099",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 5,
+          "keywords_found": [
+            "treatment"
+          ]
+        }
+      },
+      "overall_score": 10
+    },
+    {
+      "pmid": "19621844",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "sensitivity"
+          ]
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 2,
+          "keywords_found": [
+            "physical examination"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 4,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy"
+          ]
+        }
+      },
+      "overall_score": 85
+    },
+    {
+      "pmid": "19623062",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19665088",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 9,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential",
+            "alternative diagnoses"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "sensitivity"
+          ]
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "clinical presentation"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 3,
+          "keywords_found": [
+            "diagnostic criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 49,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy",
+            "antibiotic"
+          ]
+        }
+      },
+      "overall_score": 100
+    },
+    {
+      "pmid": "19684861",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 5,
+          "keywords_found": [
+            "sensitivity"
+          ]
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "signs and symptoms"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 18,
+          "keywords_found": [
+            "treatment",
+            "therapy",
+            "antibiotic",
+            "antifungal"
+          ]
+        }
+      },
+      "overall_score": 55
+    },
+    {
+      "pmid": "19687044",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    },
+    {
+      "pmid": "19695917",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 6,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 1,
+          "keywords_found": [
+            "physical examination"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": false,
+          "count": 0,
+          "keywords_found": []
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 23,
+          "keywords_found": [
+            "treatment",
+            "therapy",
+            "antiviral"
+          ]
+        }
+      },
+      "overall_score": 60
+    },
+    {
+      "pmid": "19730409",
+      "has_fulltext": true,
+      "abstract_validation": {},
+      "fulltext_validation": {
+        "differential_diagnosis": {
+          "found": true,
+          "count": 8,
+          "keywords_found": [
+            "differential diagnosis",
+            "differential",
+            "diagnostic possibilities"
+          ]
+        },
+        "diagnostic_testing": {
+          "found": true,
+          "count": 47,
+          "keywords_found": [
+            "laboratory test",
+            "diagnostic test",
+            "laboratory diagnosis",
+            "test result",
+            "sensitivity",
+            "specificity"
+          ]
+        },
+        "clinical_features": {
+          "found": true,
+          "count": 57,
+          "keywords_found": [
+            "clinical presentation",
+            "clinical manifestation",
+            "signs and symptoms",
+            "presenting symptom",
+            "physical examination"
+          ]
+        },
+        "diagnostic_criteria": {
+          "found": true,
+          "count": 6,
+          "keywords_found": [
+            "case definition",
+            "clinical criteria",
+            "laboratory criteria"
+          ]
+        },
+        "treatment_guidance": {
+          "found": true,
+          "count": 1298,
+          "keywords_found": [
+            "treatment",
+            "management",
+            "therapy",
+            "antimicrobial",
+            "antibiotic",
+            "antiviral",
+            "antifungal"
+          ]
+        }
+      },
+      "overall_score": 100
+    },
+    {
+      "pmid": "19730718",
+      "has_fulltext": false,
+      "abstract_validation": {},
+      "fulltext_validation": {},
+      "overall_score": 0
+    }
+  ]
+}
