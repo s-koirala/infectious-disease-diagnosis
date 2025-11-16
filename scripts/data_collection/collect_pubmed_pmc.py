@@ -102,13 +102,15 @@ class PubMedCollector:
             return []
 
     def fetch_article_metadata(self, pmid_list: List[str],
-                               database: str = "pubmed") -> List[Dict]:
+                               database: str = "pubmed",
+                               batch_size: int = 200) -> List[Dict]:
         """
-        Fetch metadata for list of PMIDs
+        Fetch metadata for list of PMIDs (with batching for large lists)
 
         Args:
             pmid_list: List of PubMed IDs
             database: Database ('pubmed' or 'pmc')
+            batch_size: Number of IDs to fetch per request (default 200)
 
         Returns:
             List of article metadata dictionaries
@@ -116,34 +118,38 @@ class PubMedCollector:
         if not pmid_list:
             return []
 
-        self._rate_limit()
+        all_articles = []
 
-        params = {
-            "db": database,
-            "id": ",".join(pmid_list),
-            "retmode": "json"
-        }
+        # Process in batches to avoid URL length limits
+        for i in range(0, len(pmid_list), batch_size):
+            batch = pmid_list[i:i + batch_size]
+            self._rate_limit()
 
-        if self.api_key:
-            params["api_key"] = self.api_key
+            params = {
+                "db": database,
+                "id": ",".join(batch),
+                "retmode": "json"
+            }
 
-        try:
-            response = self.session.get(ESUMMARY_URL, params=params)
-            response.raise_for_status()
-            data = response.json()
+            if self.api_key:
+                params["api_key"] = self.api_key
 
-            result = data.get("result", {})
-            articles = []
+            try:
+                response = self.session.get(ESUMMARY_URL, params=params)
+                response.raise_for_status()
+                data = response.json()
 
-            for pmid in pmid_list:
-                if pmid in result:
-                    articles.append(result[pmid])
+                result = data.get("result", {})
 
-            return articles
+                for pmid in batch:
+                    if pmid in result:
+                        all_articles.append(result[pmid])
 
-        except Exception as e:
-            print(f"Error fetching metadata: {e}")
-            return []
+            except Exception as e:
+                print(f"Error fetching metadata batch {i//batch_size + 1}: {e}")
+                continue
+
+        return all_articles
 
     def fetch_full_text_xml(self, pmc_id: str) -> Optional[str]:
         """
