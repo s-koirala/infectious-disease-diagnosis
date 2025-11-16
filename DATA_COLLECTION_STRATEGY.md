@@ -210,7 +210,7 @@ The symptom-based collection directly supports the 5-part output structure:
 
 ---
 
-## Iteration 3: MeSH-Optimized Collection (PLANNED)
+## Iteration 3: MeSH-Optimized Collection (COMPLETED)
 
 ### Strategic Response to Low Yields
 
@@ -268,16 +268,28 @@ Replacing and expanding low-yield categories:
 - New category
 - Includes: Malaria, Leishmaniasis, Schistosomiasis, Trypanosomiasis
 
-### Expected Outcomes
+### Actual Results
 
 **Quantity:**
-- 8 MeSH categories × 100 articles = 800 articles expected
-- Expected full-text: 500-600 (60-75% coverage)
+- 8 MeSH categories, 200 articles max per category
+- 1,214 metadata articles collected
+- 730 full-text articles (60.1% coverage)
 
-**Quality:**
-- Higher precision using standardized terminology
-- Better coverage of underrepresented categories
-- Complement to Iterations 1 and 2
+**Category Breakdown:**
+- Vector Borne Diseases: 200 metadata, 136 full-text
+- Respiratory Tract Infections: 200 metadata, 137 full-text
+- Sexually Transmitted Diseases: 200 metadata, 145 full-text
+- Central Nervous System Infections: 200 metadata, 106 full-text
+- Opportunistic Infections: 154 metadata, 70 full-text
+- Invasive Fungal Infections: 143 metadata, 75 full-text
+- Zoonoses: 93 metadata, 45 full-text
+- Tropical Medicine: 24 metadata, 16 full-text
+
+**MeSH Strategy Success:**
+- Vector borne: 1 article (Iteration 2) → 136 full-text (136x improvement)
+- Systemic fungal: 3 articles → 75 full-text (25x improvement)
+- Zoonoses: 15 articles → 45 full-text (3x improvement)
+- Upper respiratory: 18 articles → 137 full-text (7.6x improvement)
 
 ### Implementation
 

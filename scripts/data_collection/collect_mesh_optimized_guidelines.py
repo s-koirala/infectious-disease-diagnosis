@@ -408,7 +408,7 @@ def main():
     # Collect for each MeSH category
     results = []
     for category_key, category_info in MESH_KEYWORDS.items():
-        result = collector.collect_category(category_key, category_info, max_articles=100)
+        result = collector.collect_category(category_key, category_info, max_articles=200)
         results.append(result)
 
     # Final summary

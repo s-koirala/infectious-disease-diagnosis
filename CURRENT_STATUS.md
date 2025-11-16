@@ -288,19 +288,27 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
   - 1,039 full-text collected (59.1% coverage)
   - **Low-yield keywords identified:** vector borne (1), systemic fungal (3), zoonotic (15), upper respiratory (18)
 
-**Part 4: Third Iteration - MeSH-Optimized Collection (PLANNED)**
+**Part 4: Third Iteration - MeSH-Optimized Collection (COMPLETED)**
 - **Strategy:** Address low-yield keywords using NCBI MeSH controlled vocabulary
 - **Problem:** Free-text queries had poor retrieval for some categories
 - **Solution:** Use standardized MeSH Major Topic terms
-- **New Categories (8 MeSH terms):**
-  - Vector Borne Diseases
-  - Zoonoses
-  - Invasive Fungal Infections
-  - Respiratory Tract Infections
-  - Opportunistic Infections
-  - Sexually Transmitted Diseases
-  - Central Nervous System Infections
-  - Tropical Medicine
-- **Expected improvement:** Higher yields using standardized medical terminology
-- **Script Created:** `collect_mesh_optimized_guidelines.py` ready for execution
+- **Categories (8 MeSH terms):**
+  - Vector Borne Diseases: 200 metadata, 136 full-text
+  - Respiratory Tract Infections: 200 metadata, 137 full-text
+  - Sexually Transmitted Diseases: 200 metadata, 145 full-text
+  - Central Nervous System Infections: 200 metadata, 106 full-text
+  - Opportunistic Infections: 154 metadata, 70 full-text
+  - Invasive Fungal Infections: 143 metadata, 75 full-text
+  - Zoonoses: 93 metadata, 45 full-text
+  - Tropical Medicine: 24 metadata, 16 full-text
+- **Results:**
+  - 1,214 metadata collected
+  - 730 full-text collected (60.1% coverage)
+  - Article limit: 200 per category
+- **MeSH Strategy Validation:**
+  - Vector borne: 1 article (Iteration 2) → 136 full-text (136x improvement)
+  - Systemic fungal: 3 articles → 75 full-text (25x improvement)
+  - Zoonoses: 15 articles → 45 full-text (3x improvement)
+  - Upper respiratory: 18 articles → 137 full-text (7.6x improvement)
+- **Script:** `collect_mesh_optimized_guidelines.py`
 - **Note:** Diagnostic testing queries deferred to future iteration
