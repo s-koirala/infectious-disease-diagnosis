@@ -39,7 +39,7 @@ This document tracks the evolution of our data collection strategy from disease-
 
 ---
 
-## Iteration 2: Symptom-Based Collection (CURRENT)
+## Iteration 2: Symptom-Based Collection (COMPLETED)
 
 ### Strategic Pivot
 
@@ -202,15 +202,123 @@ The symptom-based collection directly supports the 5-part output structure:
 
 ## Iterative Refinement Process
 
-This is the **second iteration**, but likely not the last. Future iterations may:
+**Iteration 2 Results:**
+- 21 keywords processed
+- 1,757 metadata, 1,039 full-text (59.1% coverage)
+- High-yield keywords: septic shock (76), TB (69), HIV (68), sepsis (65)
+- Low-yield keywords: vector borne (1), systemic fungal (3), zoonotic (15), upper respiratory (18)
 
-### Potential Iteration 3
+---
+
+## Iteration 3: MeSH-Optimized Collection (PLANNED)
+
+### Strategic Response to Low Yields
+
+**Problem identified:** Free-text queries like "vector borne infection" don't match standard medical terminology used in PubMed indexing.
+
+**Solution:** Use NCBI's MeSH (Medical Subject Headings) controlled vocabulary.
+
+### MeSH Strategy
+
+**What is MeSH:**
+- Standardized medical terminology maintained by NCBI
+- All PubMed articles indexed with MeSH terms
+- Hierarchical structure (tree) of medical concepts
+- Queries using MeSH terms = higher precision retrieval
+
+**Query Optimization:**
+```
+Before (Iteration 2): "vector borne infection"[Title/Abstract] → 1 article
+After (Iteration 3):  "Vector Borne Diseases"[MeSH Major Topic] → Expected 50-100 articles
+```
+
+### MeSH Categories (8 terms)
+
+Replacing and expanding low-yield categories:
+
+**1. Vector Borne Diseases** (MeSH: D018562)
+- Replaces: "vector borne infection" (1 article)
+- Includes: Malaria, Dengue, Lyme Disease, West Nile Fever, Zika
+
+**2. Zoonoses** (MeSH: D015047)
+- Replaces: "zoonotic infection" (15 articles)
+- Includes: Rabies, Brucellosis, Q Fever, Tularemia, Anthrax
+
+**3. Invasive Fungal Infections** (MeSH: D000072742)
+- Replaces: "systemic fungal infection" (3 articles)
+- Includes: Candidemia, Invasive Aspergillosis, Mucormycosis
+
+**4. Respiratory Tract Infections** (MeSH: D012141)
+- Replaces: "upper respiratory tract infection" (18 articles)
+- Includes: Pharyngitis, Sinusitis, Bronchitis, CAP
+
+**5. Opportunistic Infections** (MeSH: D009894)
+- New category
+- Includes: CMV, PCP, Toxoplasmosis in immunocompromised
+
+**6. Sexually Transmitted Diseases** (MeSH: D012749)
+- New category
+- Includes: Gonorrhea, Chlamydia, Syphilis, Genital Herpes
+
+**7. Central Nervous System Infections** (MeSH: D020969)
+- New category
+- Includes: Meningitis, Encephalitis, Brain Abscess
+
+**8. Tropical Medicine** (MeSH: D014326)
+- New category
+- Includes: Malaria, Leishmaniasis, Schistosomiasis, Trypanosomiasis
+
+### Expected Outcomes
+
+**Quantity:**
+- 8 MeSH categories × 100 articles = 800 articles expected
+- Expected full-text: 500-600 (60-75% coverage)
+
+**Quality:**
+- Higher precision using standardized terminology
+- Better coverage of underrepresented categories
+- Complement to Iterations 1 and 2
+
+### Implementation
+
+**Script:** `collect_mesh_optimized_guidelines.py`
+
+**Query structure:**
+```
+("[MeSH Term]"[MeSH Major Topic])
+AND
+("differential diagnosis" OR "diagnostic approach" OR "clinical features" OR "diagnosis")
+AND
+(Review[PT] OR Practice Guideline[PT] OR Meta-Analysis[PT] OR Systematic Review[PT])
+AND
+ffrft[filter]
+AND
+English[Language]
+AND
+Humans[MeSH Terms]
+AND
+("2005"[PDAT] : "2025"[PDAT])
+```
+
+---
+
+## Future Iterations
+
+This is the **third iteration**, but likely not the last. Future iterations may:
+
+### Potential Iteration 4 - Diagnostic Testing Focus
+- Laboratory diagnosis strategies
+- Diagnostic testing recommendations
+- Serologic diagnosis
+- Microbiologic diagnosis
+- Culture and sensitivity
+- Rapid diagnostic tests
+- Test interpretation
+
+### Potential Iteration 5
 - Add more symptom keywords based on ID frequency
 - Include specific syndrome patterns (e.g., "fever and rash")
 - Geographic/travel-related queries (e.g., "returning traveler fever")
-- Immunocompromised patient queries
-
-### Potential Iteration 4
 - Age-specific queries (pediatric vs geriatric ID)
 - Specialty-specific (ICU, emergency department)
 - Procedure-related (post-surgical infections)

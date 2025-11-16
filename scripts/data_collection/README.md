@@ -66,16 +66,51 @@ python collect_pubmed_pmc.py --max-results 1000
 - Results: 3,090 articles collected, 2,444 full-text
 - Scripts: `collect_clinical_guidelines.py`
 
-### Iteration 2: Symptom-Based Collection (CURRENT)
+### Iteration 2: Symptom-Based Collection (COMPLETED)
 - Focus: Clinical presentations and symptoms (fever, rash, headache, etc.)
 - Rationale: Aligns with clinical workflow (symptoms → diagnosis)
-- Scripts: `collect_symptom_based_guidelines.py` **← Recommended**
+- Results: 1,757 metadata, 1,039 full-text (59.1% coverage)
+- Scripts: `collect_symptom_based_guidelines.py`
+
+### Iteration 3: MeSH-Optimized Collection (CURRENT)
+- Focus: Use NCBI MeSH controlled vocabulary for better retrieval
+- Rationale: Address low-yield keywords from Iteration 2
+- Target: Vector-borne, zoonotic, fungal, respiratory, opportunistic, STD, CNS, tropical
+- Scripts: `collect_mesh_optimized_guidelines.py` **← Recommended**
 
 ---
 
 ## Scripts Overview
 
-### `collect_symptom_based_guidelines.py` ⭐ **RECOMMENDED - Second Iteration**
+### `collect_mesh_optimized_guidelines.py` ⭐ **RECOMMENDED - Third Iteration**
+
+**MeSH-optimized clinical guidelines collection** - Uses standardized medical terminology.
+
+**Purpose:** Address low-yield keywords from Iteration 2 using NCBI's MeSH controlled vocabulary.
+
+**MeSH Categories (8 terms):**
+- Vector Borne Diseases
+- Zoonoses
+- Invasive Fungal Infections
+- Respiratory Tract Infections
+- Opportunistic Infections
+- Sexually Transmitted Diseases
+- Central Nervous System Infections
+- Tropical Medicine
+
+**Filters:** English, Humans, Reviews/Guidelines/Meta-analyses, Last 20 years
+
+**Usage:**
+```bash
+# Run MeSH-optimized collection (~800 articles)
+python collect_mesh_optimized_guidelines.py
+```
+
+**Output:** `data/raw/mesh_optimized_guidelines/`
+
+---
+
+### `collect_symptom_based_guidelines.py` - Second Iteration (COMPLETED)
 
 **Symptom-based clinical guidelines collection** - Aligns with actual clinical workflow.
 
@@ -362,9 +397,19 @@ See [DATA_COLLECTION_STRATEGY.md](../../DATA_COLLECTION_STRATEGY.md) for complet
 ---
 
 **Last Updated:** 2025-11-15
-**Current Status:** Iteration 2 - Symptom-Based Collection Ready
+**Current Status:** Iteration 3 - MeSH-Optimized Collection Ready
+
+**Completed:**
+- Iteration 1: 3,090 metadata, 2,444 full-text (disease-specific)
+- Iteration 2: 1,757 metadata, 1,039 full-text (symptom-based)
+- **Total: 4,847 metadata, 3,483 full-text articles**
+
 **Next Steps:**
-1. Run symptom-based collection: `python collect_symptom_based_guidelines.py`
-2. Validate content quality
-3. Integrate with Iteration 1 collection
+1. Run MeSH-optimized collection: `python collect_mesh_optimized_guidelines.py`
+2. Validate content quality across all iterations
+3. Integrate collections and remove duplicates
 4. Begin data processing and knowledge extraction
+
+**Future Iterations:**
+- Iteration 4: Diagnostic testing focus (deferred)
+- Iteration 5: Additional symptoms and syndrome patterns

@@ -264,7 +264,7 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
   - 81.5% Reviews, 8.2% Meta-analyses, 2.6% Practice Guidelines
   - Top journals: BMC Infectious Diseases, Medicine, Frontiers in Immunology
 
-**Part 3: Second Iteration - Symptom-Based Collection (REFINED STRATEGY)**
+**Part 3: Second Iteration - Symptom-Based Collection (COMPLETED)**
 - **Critical Pivot:** Shifted from disease-specific to symptom-based queries
 - **Rationale:** Clinicians present with symptoms, not diagnoses - aligns with actual workflow
 - **Output Structure Defined:**
@@ -273,13 +273,34 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
   3. Less common/rare DD
   4. Lab tests for highest probability DD
   5. Clarifying questions to refine DD
-- **New Keyword Strategy:**
+- **Keyword Strategy:**
   - Symptoms: fever, rash, headache, nausea, vomiting, diarrhea
-  - Conditions: sepsis, pneumonia, meningitis, encephalitis, HIV/AIDS, TB, etc.
+  - Conditions: sepsis, pneumonia, meningitis, encephalitis, HIV/AIDS, TB, UTI, etc.
   - Diagnostic focus: differential diagnosis, diagnostic approach, clinical features
 - **Enhanced Filters:**
   - English language only
   - Humans (no animal studies)
   - Reviews/Guidelines/Meta-analyses/Systematic Reviews
   - Last 20 years (2005-2025)
-- **Script Created:** `collect_symptom_based_guidelines.py` ready for execution
+- **Results:**
+  - 21 keywords processed
+  - 1,757 metadata collected
+  - 1,039 full-text collected (59.1% coverage)
+  - **Low-yield keywords identified:** vector borne (1), systemic fungal (3), zoonotic (15), upper respiratory (18)
+
+**Part 4: Third Iteration - MeSH-Optimized Collection (PLANNED)**
+- **Strategy:** Address low-yield keywords using NCBI MeSH controlled vocabulary
+- **Problem:** Free-text queries had poor retrieval for some categories
+- **Solution:** Use standardized MeSH Major Topic terms
+- **New Categories (8 MeSH terms):**
+  - Vector Borne Diseases
+  - Zoonoses
+  - Invasive Fungal Infections
+  - Respiratory Tract Infections
+  - Opportunistic Infections
+  - Sexually Transmitted Diseases
+  - Central Nervous System Infections
+  - Tropical Medicine
+- **Expected improvement:** Higher yields using standardized medical terminology
+- **Script Created:** `collect_mesh_optimized_guidelines.py` ready for execution
+- **Note:** Diagnostic testing queries deferred to future iteration
