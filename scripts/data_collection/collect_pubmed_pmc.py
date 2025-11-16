@@ -248,12 +248,12 @@ def build_infectious_disease_query(open_access_only: bool = True) -> str:
     # Combine with OR
     query = " OR ".join([f'"{term}"' for term in id_terms])
 
-    # Add open access filter
+    # Add free full text filter (for PMC Open Access articles)
     if open_access_only:
-        query += ' AND "open access"[filter]'
+        query += ' AND ffrft[filter]'
 
     # Restrict to recent articles (last 10 years for relevance)
-    query += ' AND ("2014"[Date - Publication] : "2025"[Date - Publication])'
+    query += ' AND ("2014"[PDAT] : "2025"[PDAT])'
 
     return query
 
@@ -307,9 +307,18 @@ def collect_pilot_dataset(collector: PubMedCollector, output_dir: Path,
     # Fetch metadata
     metadata_list = collector.fetch_article_metadata(pmid_list)
 
-    # Convert to PMC IDs for full text access
-    print("\nConverting PMIDs to PMC IDs...")
-    pmid_to_pmcid = collector.convert_pmid_to_pmcid(pmid_list)
+    # Extract PMC IDs from metadata
+    print("\nExtracting PMC IDs from metadata...")
+    pmid_to_pmcid = {}
+    for pmid, metadata in zip(pmid_list, metadata_list):
+        # Check articleids for PMC ID
+        article_ids = metadata.get('articleids', [])
+        for id_entry in article_ids:
+            if id_entry.get('idtype') == 'pmc':
+                pmcid = id_entry.get('value', '')
+                if pmcid:
+                    pmid_to_pmcid[pmid] = pmcid
+                    break
 
     print(f"Found {len(pmid_to_pmcid)} articles with PMC full text available")
 
