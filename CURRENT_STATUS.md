@@ -1,13 +1,29 @@
 # Infectious Disease Diagnosis - Current Status
 
 **Last Updated:** 2025-11-15
-**Current Phase:** Research & Planning (COMPLETED)
-**Next Phase:** Data Collection & Preparation
-**Status:** Phase 1 Complete - Ready for Phase 2
+**Current Phase:** Data Collection & Preparation (IN PROGRESS)
+**Phase Status:** Phase 2 Active - Clinical Guidelines Collection
+**Status:** Collection scripts validated - Ready for full-scale collection
 
 ---
 
 ## Recent Work
+
+**2025-11-15: Phase 2 Active - Clinical Data Collection**
+
+**Current Collection Status:**
+- Pilot test: 100 articles collected (validation)
+- Full test: 1,000 articles collected (82.3% full-text)
+- Clinical test: 50 sepsis articles (82% reviews, 62.5% diagnostic content)
+- **Ready for production:** Full 52-disease clinical guidelines collection
+
+**Scripts Created:**
+- `collect_pubmed_pmc.py` - General PubMed/PMC collection (fixed and validated)
+- `collect_clinical_content.py` - Clinical-focused collection
+- `collect_clinical_guidelines.py` - Disease-specific guidelines (52 diseases)
+- `extract_statpearls.py` - StatPearls FTP extraction (awaiting license)
+- `analyze_collection.py` - Article type analysis
+- `analyze_sepsis_sections.py` - Section content analysis
 
 **2025-11-15: Phase 1 Completion - Research & Planning**
 
@@ -215,3 +231,24 @@ Reference model: UpToDate represents the gold standard in clinical decision supp
 - Created StatPearls integration guide with three access pathways
 - **User Decision:** StatPearls deferred pending license clarification - will circle back after gathering more information
 - **Active Phase 2:** Proceeding with legally unrestricted open data (PubMed/PMC, CDC, WHO)
+
+**Session 3 (2025-11-15): Data Collection Implementation**
+- **NCBI API Credentials:** Configured with API key (10 req/sec rate limit)
+- **Initial Collection Issues Fixed:**
+  - Fixed query filter: "open access"[filter] → ffrft[filter]
+  - Fixed date filter format: [Date - Publication] → [PDAT]
+  - Fixed 414 Request-URI Too Long error by implementing batching (200 IDs per batch)
+  - Fixed PMC ID extraction to use article metadata directly
+- **Pilot Collection:** Successfully collected 100 articles (88% full-text coverage)
+- **Full Collection:** Successfully collected 1,000 articles (82.3% full-text coverage)
+- **Critical User Insight:** Identified collection was gathering research papers instead of clinical diagnostic content
+- **Strategy Refinement:** Created clinical-focused collection targeting reviews, guidelines, meta-analyses
+- **Clinical Collection Test:** Improved to 43% reviews, 2% practice guidelines
+- **Two-Track Solution Created:**
+  1. `extract_statpearls.py` - Efficient StatPearls FTP extraction and infectious disease filtering
+  2. `collect_clinical_guidelines.py` - Disease-specific clinical guidelines collection (52 diseases)
+- **Sepsis Validation:** Tested clinical guidelines collection on sepsis (50 articles, 82% reviews, 62.5% diagnostic content)
+- **Feature Clarification:** Updated project documentation to explicitly include:
+  - Advise differential diagnosis
+  - Advise diagnostic tests
+  - Provide literature and references to clinical practitioners

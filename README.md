@@ -12,7 +12,12 @@ A comprehensive clinical decision support system for infectious disease clinics,
 1. **Predictive Model:** ML-based diagnostic prediction for infectious diseases
 2. **LLM Chatbot:** Conversational AI assistant for clinical guidance
 
-This tool assists clinicians in determining appropriate labs, tests, treatments, and therapeutic approaches while avoiding liability issues by not providing exact treatment prescriptions.
+This tool assists clinicians by:
+- **Advising differential diagnoses** - generating ranked lists of possible infectious diseases
+- **Advising diagnostic tests** - recommending appropriate laboratory and imaging studies
+- **Providing literature and references** - supporting recommendations with peer-reviewed evidence
+
+The system guides clinicians in determining appropriate labs, tests, treatments, and therapeutic approaches while avoiding liability issues by not providing exact treatment prescriptions.
 
 ---
 
@@ -28,14 +33,18 @@ Active planning and formative research phase. Conducting methodology research, a
 - Develop predictive model for infectious disease diagnosis
 - Create LLM-powered chatbot for clinical decision support
 - Assist clinicians in infectious disease clinics with diagnostic workflow
+- **Advise differential diagnosis** - Generate and rank possible infectious disease diagnoses
+- **Advise diagnostic tests** - Recommend appropriate laboratory tests, imaging, and diagnostic procedures
+- **Provide literature and references** - Supply clinical practitioners with peer-reviewed evidence and guidelines
 - Guide determination of: laboratory tests, diagnostic procedures, treatment categories, and therapeutic approaches
 - Avoid liability by NOT prescribing specific medications or exact treatment protocols
 
 **Clinical Use Cases:**
-- Aid in differential diagnosis of infectious diseases
-- Recommend appropriate diagnostic tests and laboratories
+- Aid in differential diagnosis of infectious diseases with evidence-based ranking
+- Recommend appropriate diagnostic tests and laboratories with clinical rationale
 - Suggest treatment categories and therapeutic considerations
-- Provide evidence-based clinical guidance
+- Provide evidence-based clinical guidance with literature references
+- Support clinical decision-making with peer-reviewed sources
 
 ---
 
